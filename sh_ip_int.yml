@@ -1,7 +1,7 @@
 ---
 - name: Cau hinh switch
   hosts: all
-  gather_fact: no
+  gather_facts: no
   tasks:
     - name: show ip
       ios_command: 
