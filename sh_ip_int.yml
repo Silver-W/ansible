@@ -1,6 +1,6 @@
 ---
 - name: Cau hinh switch
-  hosts: all
+  hosts: cisco
   gather_facts: no
   connection: network_cli
 
