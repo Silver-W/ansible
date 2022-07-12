@@ -1,0 +1,7 @@
+---
+- name: Cau hinh switch
+  hosts: all
+  tasks:
+    - name: show ip
+      cisco.ios.ios_command: 
+        commands: sh ip int bri
