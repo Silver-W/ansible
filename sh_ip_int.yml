@@ -6,3 +6,5 @@
     - name: show ip
       ios_command: 
         commands: sh ip int bri
+      register: output
+    - debug: var=output.stdout_lines
