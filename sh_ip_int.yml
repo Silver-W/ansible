@@ -8,5 +8,3 @@
     ios_command: 
       commands: 
         - sh ip int bri
-    register: output
-    debug: var=ip_interface_facts
