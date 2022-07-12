@@ -4,4 +4,4 @@
   tasks:
     - name: show ip
       cisco.ios.ios_command: 
-        commands: do sh ip int bri
+        commands: sh ip int bri
