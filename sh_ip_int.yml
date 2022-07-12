@@ -2,10 +2,20 @@
 - name: Cau hinh switch
   hosts: all
   gather_facts: no
+  connection: network_cli
+
+  roles:
+    - ansible-network.network-engine
   tasks:
-    - name: show ip
-      ios_command: 
-        commands: 
-          - sh ip int bri
-      register: output
-      debug: var=output.stdout_lines
+  - name: show ip
+    ios_command: 
+      commands: 
+        - sh ip int bri
+    register: output
+  - name: PARSE THE RAW OUTPUT
+    command_parser:
+      file: "parsers/ios/show_ip_interface_brief.yaml"
+      content: "{{ output.stdout[0] }}"
+
+  - name: DISPLAY THE DATA
+    debug: var=ip_interface_facts
