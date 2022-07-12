@@ -4,9 +4,9 @@
   gather_facts: no
 
   tasks:
-  - name: show ip
-    ios_command: 
-      commands: 
-        - show ip interfaces brief
-    register: output
-  - debug: var=ouput.stdout_lines
+    - name: show ip
+      ios_command: 
+        commands: 
+          - show ip interfaces brief
+      register: output
+    - debug: var=ouput.stdout_lines
