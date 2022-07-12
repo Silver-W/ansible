@@ -9,4 +9,4 @@
         commands: 
           - show ip interfaces brief
       register: output
-    - debug: var=ouput.stdout_lines
+    - debug: var=output.stdout_lines
