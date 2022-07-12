@@ -3,9 +3,6 @@
   hosts: all
   gather_facts: no
 
-  roles:
-  - network-engine
-
   tasks:
   - name: show ip
     ios_command: 
