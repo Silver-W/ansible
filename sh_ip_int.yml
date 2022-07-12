@@ -2,7 +2,9 @@
 - name: Cau hinh switch
   hosts: all
   gather_facts: no
-  connection: network_cli
+
+  roles:
+  - network-engine
 
   tasks:
   - name: show ip
@@ -10,6 +12,4 @@
       commands: 
         - sh ip int bri
     register: output
-
-  - name: data
     debug: var=ip_interface_facts
