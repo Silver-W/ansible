@@ -4,7 +4,7 @@
   gather_facts: no
   tasks:
     - name: show ip
-      ios_command: 
+      cisco.ios.ios_command: 
         commands: sh ip int bri
       register: output
     - debug: var=output.stdout_lines
