@@ -3,5 +3,5 @@
   hosts: all
   tasks:
     - name: show ip
-      cisco.ios.ios_command: 
+      ios_command: 
         commands: sh ip int bri
