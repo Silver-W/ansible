@@ -6,9 +6,9 @@
   tasks:
     - name: create loopback
       ios_interface:
-        name: Loopback 15
+        name: Loopback 96
         state: up
-        
+
     - name: show ip
       ios_command: 
         commands: 
